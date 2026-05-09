@@ -1,169 +1,194 @@
-/**
- * ============================================================================
- * PERSONALISATION STYLES
- * ============================================================================
- * Defines the styling for the personalisation workflow screen.
- */
-
 /* ==========================================================================
-   Base Layout
+   Base Layout & Container constraints (No Scroll)
    ========================================================================== */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6; /* Neutral desktop background */
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
 main {
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 380px;
+    height: 100vh;
+    max-height: 800px;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+@media (min-height: 800px) {
+    main {
+        border-radius: 40px; /* Simulates phone corners on desktop */
+    }
 }
 
 /* ==========================================================================
    Hero Section
    ========================================================================== */
-
 .hero {
     background-image: url(/assets/images/Wave.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 100%;
+    background-position: center bottom;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    flex-shrink: 0;
 }
 
-/* Header line with back button, heading and avatar */
-.hero .first-line {
+.first-line {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 12px;
 }
 
-.hero .back-button {
-    line-height: 50px;
-    text-align: center;
+.back-button {
     text-decoration: none;
-    font-size: 25px;
-    font-weight: 900;
-    color: var(--primary-color);
-    transition: color 0.2s;
+    font-size: 24px;
+    color: #2967c5;
+    font-weight: bold;
+    width: 40px; /* Balances the layout with heali avatar */
+    transition: opacity 0.2s ease;
 }
 
-.hero .back-button:hover,
-.hero .back-button:focus {
-    color: var(--primary-hover);
-    outline: none;
+.back-button:hover {
+    opacity: 0.7;
 }
 
 #heading {
     text-align: center;
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
-    margin: 0; 
+    color: #2967c5;
+    font-size: 1.25rem;
+    margin: 0;
+    flex-grow: 1;
 }
 
-.hero .heali {
+.heali {
     width: 40px;
+    height: auto;
 }
 
-/* Subtext under heading */
 #text {
     text-align: center;
-    color: var(--text-light);
-    font-size: 14px;
-    margin-top: 15px;
-    padding: 0 15px;
+    color: #475569;
+    font-size: 13px;
+    margin: 0 20px;
+    line-height: 1.4;
 }
 
 /* ==========================================================================
    Selection Grid
    ========================================================================== */
-
 .selection {
-    width: 100%;
-    max-width: 340px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 20px auto;
-    padding: 0 10px;
+    gap: 12px;
+    padding: 10px 25px;
+    flex-grow: 1; /* Pushes content to fill space */
+    align-content: center; /* Centers grid vertically inside flex-grow */
 }
 
-/* ==========================================================================
-   Selection Cards
-   ========================================================================== */
-
+/* Modern App-like Cards */
 .card {
     display: flex;
     flex-direction: column;
-    background-color: var(--secondary-color);
-    border: 1.5px solid var(--border-color);
-    border-radius: var(--border-radius-md);
     align-items: center;
-    justify-content: flex-start;
-    box-shadow: var(--shadow-sm);
-    padding: 15px 5px;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px 8px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    width: 100%;
-    font-family: inherit;
-    /* Remove default button styling */
-    appearance: none;
-    -webkit-appearance: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
 
-.card:hover,
-.card:focus {
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+.card:hover, .card:focus {
+    border-color: #2967c5;
+    background-color: #f0f5ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(41, 103, 197, 0.12);
     outline: none;
 }
 
-.card .card-icon {
-    font-size: 40px;
-    color: var(--text-main);
-    padding: 10px;
-    border: 2px solid var(--border-color);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-color);
-    margin-bottom: 10px;
-    width: 70px;
-    height: 70px;
-    transition: border-color 0.2s;
+/* Persist hover styles when the card is actively selected */
+.card[aria-pressed="true"] {
+    border-color: #2967c5;
+    background-color: #f0f5ff;
+    box-shadow: 0 8px 16px rgba(41, 103, 197, 0.12);
 }
 
-.card:hover .card-icon,
-.card:focus .card-icon {
-    border-color: var(--primary-color);
+.card-icon {
+    font-size: 32px;
+    color: #2967c5;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
 }
 
-.card .card-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.card:hover .card-icon {
+    transform: scale(1.1);
 }
 
-.card .card-name {
-    text-align: center;
-    color: var(--text-main);
-    font-size: 1.1rem;
+/* Persist icon scale when selected */
+.card[aria-pressed="true"] .card-icon {
+    transform: scale(1.1);
+}
+
+.card-name {
+    color: #1e293b;
+    font-size: 1.05rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    margin: 5px 0;
+    margin: 0 0 4px 0;
 }
 
-.card .card-details {
+.card-details {
+    color: #64748b;
+    font-size: 11px;
     text-align: center;
-    font-size: 12px;
-    color: var(--text-main);
-    padding: 0 5px;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Action Section
+   ========================================================================== */
+.btn-primary {
+    display: block;
+    width: 250px;
+    margin: 15px auto 30px auto;
+    line-height: 52px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #2967c5;
+    color: #ffffff;
+    border-radius: 26px; /* Pill shape */
+    box-shadow: 0 4px 15px rgba(41, 103, 197, 0.3);
+    transition: all 0.2s ease;
+    flex-shrink: 0; /* Ensures button stays at bottom without shrinking */
+}
+
+.btn-primary:hover {
+    background-color: #1e5aa8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(41, 103, 197, 0.4);
+}
+
+/* Disabled state for Continue button */
+.btn-primary.disabled {
+    background-color: #e2e8f0;
+    color: #94a3b8;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: none; /* Prevents clicks while disabled */
 }

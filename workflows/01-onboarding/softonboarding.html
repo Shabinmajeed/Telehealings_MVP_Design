@@ -9,6 +9,7 @@
     <title>Telehealings - Onboarding</title>
     <link rel="stylesheet" href="/css/global.css"/>
     <link rel="stylesheet" href="/workflows/01-onboarding/softonboarding.css"/>
+    <meta name="view-transition" content="same-origin" />
 </head>   
 
 <!-- =======================================================================
@@ -22,7 +23,7 @@
         <header class="hero">
             <h1 id="mainheader">Hi I'm Heali</h1>
             <p id="subheader">AI Powered Healing Partner</p>
-            <img src="/assets/images/Heali.png" alt="Heali AI">
+            <img src="/assets/images/Heali.png" alt="Heali AI" class="heali-avatar">
             <p id="question">"What should we call you?"</p>
         </header>
 
@@ -43,8 +44,27 @@
             <!-- ===================================================================
                  ACTION SECTION: Continue Button
                  =================================================================== -->
-            <button type="submit" class="btn-primary">Continue →</button>
+            <button type="submit" class="btn-primary disabled" id="submitBtn" disabled>Continue →</button>
         </form>
     </main>
+
+    <!-- Logic to validate the form before enabling the submit button -->
+    <script>
+        const userNameInput = document.getElementById('userName');
+        const termsCheckbox = document.getElementById('terms');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function validateForm() {
+            const isNameValid = userNameInput.value.trim().length >= 3;
+            const isTermsChecked = termsCheckbox.checked;
+
+            // Enable button only if both conditions are met
+            submitBtn.disabled = !(isNameValid && isTermsChecked);
+            submitBtn.classList.toggle('disabled', submitBtn.disabled);
+        }
+
+        userNameInput.addEventListener('input', validateForm);
+        termsCheckbox.addEventListener('change', validateForm);
+    </script>
 </body>
 </html>

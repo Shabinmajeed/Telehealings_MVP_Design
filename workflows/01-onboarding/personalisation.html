@@ -9,6 +9,8 @@
     <title>Telehealings - Personalisation</title>
     <link rel="stylesheet" href="/css/global.css"/>
     <link rel="stylesheet" href="/workflows/01-onboarding/personalisation.css"/>
+    <!-- FontAwesome CDN for high-quality internet icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <!-- =======================================================================
@@ -43,42 +45,42 @@
             
             <!-- Card 01: Stress -->
             <button class="card" aria-pressed="false">
-                <div class="card-icon"><img src="/assets/images/stress.jpg" class="card-image" alt="Stress icon"></div>
+                <div class="card-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
                 <div class="card-name">Stress</div>
                 <div class="card-details">Managing daily pressure</div>
             </button>
             
             <!-- Card 02: Anxiety -->
             <button class="card" aria-pressed="false">
-                <div class="card-icon">[]</div>
+                <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
                 <div class="card-name">Anxiety</div>
                 <div class="card-details">Calming your mind</div>
             </button>
             
             <!-- Card 03: Sleep -->
             <button class="card" aria-pressed="false">
-                <div class="card-icon">[]</div>
+                <div class="card-icon"><i class="fa-solid fa-moon"></i></div>
                 <div class="card-name">Sleep</div>
                 <div class="card-details">Better rest</div>
             </button>
             
             <!-- Card 04: Relationships -->
             <button class="card" aria-pressed="false">
-                <div class="card-icon">[]</div>
+                <div class="card-icon"><i class="fa-solid fa-user-group"></i></div>
                 <div class="card-name">Relationships</div>
                 <div class="card-details">Building connections</div>
             </button>
             
             <!-- Card 05: Self-esteem -->
             <button class="card" aria-pressed="false">
-                <div class="card-icon">[]</div>
+                <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
                 <div class="card-name">Self-esteem</div>
                 <div class="card-details">Building confidence</div>
             </button>
             
             <!-- Card 06: Focus -->
             <button class="card" aria-pressed="false">
-                <div class="card-icon">[]</div>
+                <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
                 <div class="card-name">Focus</div>
                 <div class="card-details">Improving concentration</div>
             </button>
@@ -88,7 +90,31 @@
         <!-- ===================================================================
              ACTION SECTION: Continue Button
              =================================================================== -->
-        <a href="04Home.html" class="btn-primary">Continue</a>
+        <a href="04Home.html" class="btn-primary disabled" id="continueBtn">Continue</a>
     </main>
+
+    <!-- Logic to handle card selection and enable/disable continue button -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const continueBtn = document.getElementById('continueBtn');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Toggle the aria-pressed state to track selection
+                const isSelected = card.getAttribute('aria-pressed') === 'true';
+                card.setAttribute('aria-pressed', !isSelected);
+                
+                // Check if any card has aria-pressed="true"
+                const anySelected = document.querySelectorAll('.card[aria-pressed="true"]').length > 0;
+                
+                // Toggle the disabled class on the button accordingly
+                if (anySelected) {
+                    continueBtn.classList.remove('disabled');
+                } else {
+                    continueBtn.classList.add('disabled');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
