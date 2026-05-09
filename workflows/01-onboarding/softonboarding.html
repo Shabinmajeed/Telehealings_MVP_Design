@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- =======================================================================
+     HEAD SECTION
+     ======================================================================= -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telehealings - Onboarding</title>
+    <link rel="stylesheet" href="/css/global.css"/>
+    <link rel="stylesheet" href="/workflows/01-onboarding/softonboarding.css"/>
+</head>   
+
+<!-- =======================================================================
+     BODY SECTION
+     ======================================================================= -->
+<body>
+    <main>
+        <!-- ===================================================================
+             HERO SECTION: Greeting and Image
+             =================================================================== -->
+        <header class="hero">
+            <h1 id="mainheader">Hi I'm Heali</h1>
+            <p id="subheader">AI Powered Healing Partner</p>
+            <img src="/assets/images/Heali.png" alt="Heali AI">
+            <p id="question">"What should we call you?"</p>
+        </header>
+
+        <!-- ===================================================================
+             FORM SECTION: Input, Terms, and Action
+             =================================================================== -->
+        <form action="personalisation.html" method="GET">
+            <label for="userName" class="sr-only">Your Name</label>
+            <input type="text" id="userName" name="userName" placeholder="Your name" class="input-standard">
+            
+            <div id="terms-container">
+                <input type="checkbox" id="terms" custom="tick" required>
+                <label for="terms">
+                    by continuing, you agree to our <span>Terms and Privacy Policy</span>
+                </label>
+            </div>
+
+            <!-- ===================================================================
+                 ACTION SECTION: Continue Button
+                 =================================================================== -->
+            <button type="submit" class="btn-primary">Continue →</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/**
+ * ============================================================================
+ * SOFT ONBOARDING STYLES
+ * ============================================================================
+ * Defines the styling for the soft onboarding workflow.
+ */
+
+/* ==========================================================================
+   Base Layout
+   ========================================================================== */
+main {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+/* Hero section with background graphic */
+.hero {
+    background-image: url(/assets/images/Wave.png);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Typography & Headers
+   ========================================================================== */
+
+/* Main header styling */
+#mainheader {
+    display: block;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    text-shadow: 0.5px 0.5px 0.5px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* Subheader text styling */
+#subheader {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    letter-spacing: 0.1px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+/* Question label styling */
+#question {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   Media
+   ========================================================================== */
+
+/* Image sizing */
+img {
+    width: 100%;
+    max-width: 230px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Terms & Conditions
+   ========================================================================== */
+
+/* Terms section spacing */
+#terms-container {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Label and nested inline text styling */
+label {
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+label span {
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+}
