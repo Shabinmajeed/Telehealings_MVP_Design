@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telehealings - Boarding</title>
+    <link rel="stylesheet" href="./Phone nmber verification.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hidden { display: none !important; }
+    </style>
+</head>
+
+<body>
+    <div class="mobile-container hero">
+        <header class="boarding-header">
+            <div class="illustration-wrap">
+                <p class="instruction-text" id="instruction-text">
+                    We will send you a one-time password to verify your account.
+                </p>
+                <img src="../../assets/images/heali with phone.png" alt="Heali" class="heali-with-phone-img">
+            </div>
+            <h1 class="main-title" id="display-title">Enter Phone Number</h1>
+        </header>
+
+        <main class="form-section" id="phone-state">
+            <label for="phone" class="input-label">Phone Number</label>
+            <div class="phone-input-wrapper">
+                <div class="country-selector">
+                    <span class="flag">⌄</span>
+                </div>
+                <input type="tel" id="phone" placeholder="000 000 0000" class="phone-field">
+            </div>
+
+            <button type="button" class="primary-btn" id="generate-btn">
+                Generate OTP <span class="arrow">→</span>
+            </button>
+        </main>
+
+        <main class="form-section" id="otp-state" style="display: none;">
+            <label class="input-label">Enter Code</label>
+            <div class="otp-input-wrapper">
+                <input type="text" maxlength="1" class="otp-box" placeholder="0">
+                <input type="text" maxlength="1" class="otp-box" placeholder="0">
+                <input type="text" maxlength="1" class="otp-box" placeholder="0">
+                <input type="text" maxlength="1" class="otp-box" placeholder="0">
+                <input type="text" maxlength="1" class="otp-box" placeholder="0">
+                <input type="text" maxlength="1" class="otp-box" placeholder="0">
+            </div>
+            
+            <div class="resend-container" style="text-align: center; margin-bottom: 20px;">
+                <a href="#" class="resend-link" style="color: #1A202C; font-size: 14px; font-weight: 600;">Resend Code</a>
+            </div>
+
+            <button type="button" class="primary-btn" id="verify-btn">
+                Verify
+            </button>
+        </main>
+
+        <footer class="social-footer">
+            <div class="social-buttons">
+                <button class="social-btn"><img src="../../assets/images/Google.png" alt="Google"> Google</button>
+                <button class="social-btn"><img src="../../assets/images/Apple.png" alt="Apple"> Apple</button>
+            </div>
+            <p class="support-text">Having trouble? <a href="#">Contact Support</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('generate-btn').addEventListener('click', function() {
+            const otpState = document.getElementById('otp-state');
+            otpState.style.display = 'block';
+            document.getElementById('display-title').innerText = 'Verify OTP';
+            document.getElementById('instruction-text').innerText = 'Enter the 6-digit code sent to your phone.';
+        });
+    </script>
+</body>
+</html>

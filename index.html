@@ -31,7 +31,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #1E5AA8 0%, #4A90E2 100%);
             width: 100%;
-            max-width: 380px; /* Limit width to mobile screen size */
+            max-width: var(--screen-max-width, 380px); /* Limit width to mobile screen size */
             height: 100vh;
             max-height: 800px; /* Optional limit on vertical height for tall screens */
             display: flex;

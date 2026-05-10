@@ -1,0 +1,210 @@
+/* BASE STYLES */
+/* Universal box-sizing and font reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body layout */
+body {
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Mobile container wrapper */
+.mobile-container {
+    width: 100%;
+    max-width: var(--screen-max-width, 380px); /* Standard Viewport */
+    background: #FFFFFF;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+   /* Custom styles for the mascot image */
+        .heali-with-phone-img {
+            width: 140px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+
+/* CURVED HEADER */
+.boarding-header {
+    background-image: url(../../assets/images/Wave.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    padding: 40px 24px 60px 24px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+/* Illustration and text wrapper in header */
+.illustration-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Instruction text style */
+.instruction-text {
+    font-size: 14px;
+    color: #718096;
+    line-height: 1.5;
+    margin-bottom: 15px; /* Added for spacing */
+}
+
+.main-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* FORM SECTION */
+.form-section {
+    padding: 40px 24px 10px 24px;
+    flex-grow: 1; /* Allows form to take available space */
+    display: flex; /* Added for internal layout */
+    flex-direction: column; /* Added for internal layout */
+}
+
+/* Input label styling */
+.input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2D3748;
+}
+
+/* Wrapper for phone input fields (country code + number) */
+.phone-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+/* Country selector dropdown/input */
+.country-selector {
+    width: 60px;
+    height: 50px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Phone number input field */
+.phone-field {
+    flex-grow: 1;
+    height: 50px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: #1A202C;
+}
+
+/* Primary action button styling */
+.primary-btn {
+    width: 100%;
+    height: 56px;
+    background-color: #1A56DB; /* Telehealings Blue */
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+/* FOOTER SECTION */
+.social-footer {
+    padding: 24px;
+    text-align: center;
+}
+
+/* Wrapper for social login buttons */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-btn {
+    /* Individual social button styling */
+    flex: 1;
+    height: 50px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Social button icon styling */
+.social-btn img {
+    width: 20px;
+}
+
+/* Support text and link in footer */
+.support-text {
+    font-size: 12px;
+    color: #718096;
+}
+
+.support-text a {
+    color: #1A202C;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* OTP INPUT STYLING */
+/* Wrapper for OTP input boxes */
+.otp-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+/* Individual OTP input box styling */
+.otp-box {
+    width: 48px;
+    height: 56px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A56DB;
+    background-color: #F8FAFC;
+    transition: border-color 0.2s ease;
+}
+
+/* OTP input box focus state */
+.otp-box:focus {
+    border-color: #1A56DB;
+    outline: none;
+    background-color: #FFFFFF;
+}
