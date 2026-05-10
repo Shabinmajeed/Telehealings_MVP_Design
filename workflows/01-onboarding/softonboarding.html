@@ -8,7 +8,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telehealings - Onboarding</title>
     <link rel="stylesheet" href="../../css/global.css"/>
-    <link rel="stylesheet" href="./softonboarding.css"/>
+    <style>
+        /**
+         * ============================================================================
+         * SOFT ONBOARDING STYLES
+         * ============================================================================
+         * Specific styles for the soft onboarding workflow.
+         */
+        
+        /* ==========================================================================
+           Base Layout
+           ========================================================================== */
+        
+        /* Main content area styles */
+        main {
+            width: 100%;
+            height: 100vh;
+            max-height: 800px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        
+        @media (min-height: 800px) {
+            main {
+                border-radius: var(--border-radius-phone);
+            }
+        }
+        
+        /* ==========================================================================
+           Hero Section
+           ========================================================================== */
+        .hero {
+            background-image: url(/assets/images/Wave.png);
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        /* ==========================================================================
+           Typography & Headers
+           ========================================================================== */
+        #mainheader {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+        
+        #subheader {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0 0 35px 0;
+        }
+        
+        #question {
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        
+        /* ==========================================================================
+           Terms & Conditions
+           ========================================================================== */
+        #terms-container {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        #terms {
+            margin-top: 2px;
+            accent-color: var(--primary-color);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        label span {
+            color: var(--primary-color);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 500;
+        }
+    </style>
     <meta name="view-transition" content="same-origin" />
 </head>   
 

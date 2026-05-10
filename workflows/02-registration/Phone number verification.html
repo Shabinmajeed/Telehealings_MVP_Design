@@ -4,15 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telehealings - Boarding</title>
+    <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="./Phone nmber verification.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .hidden { display: none !important; }
+
+        .illustration-wrap {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .illustration-wrap .instruction-text,
+        .illustration-wrap .heali-with-phone-img {
+            margin-bottom: 0;
+        }
+
+        .boarding-header {
+            padding-bottom: 20px; /* Reduces the gap below the title */
+        }
+
+        .main-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #143c8e;
+            margin-top: 20px;
+        }
+        /* Social Footer & Buttons Styling */
+        .social-footer {
+            text-align: center;
+            padding: var(--spacing-xl) var(--container-padding);
+            margin-top: auto; /* Pushes the footer to the bottom of the screen */
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .support-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .support-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
     </style>
 </head>
 
 <body>
-    <div class="mobile-container hero">
+    <div class="mobile-container">
         <header class="boarding-header">
             <div class="illustration-wrap">
                 <p class="instruction-text" id="instruction-text">
@@ -32,7 +78,7 @@
                 <input type="tel" id="phone" placeholder="000 000 0000" class="phone-field">
             </div>
 
-            <button type="button" class="primary-btn" id="generate-btn">
+            <button type="button" class="btn-primary btn-full" id="generate-btn">
                 Generate OTP <span class="arrow">→</span>
             </button>
         </main>
@@ -52,9 +98,9 @@
                 <a href="#" class="resend-link" style="color: #1A202C; font-size: 14px; font-weight: 600;">Resend Code</a>
             </div>
 
-            <button type="button" class="primary-btn" id="verify-btn">
+            <a href="./account verified.html" class="btn-primary btn-full" id="verify-btn" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
                 Verify
-            </button>
+            </a>
         </main>
 
         <footer class="social-footer">
@@ -70,6 +116,7 @@
         document.getElementById('generate-btn').addEventListener('click', function() {
             const otpState = document.getElementById('otp-state');
             otpState.style.display = 'block';
+            this.style.display = 'none';
             document.getElementById('display-title').innerText = 'Verify OTP';
             document.getElementById('instruction-text').innerText = 'Enter the 6-digit code sent to your phone.';
         });

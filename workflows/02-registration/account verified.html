@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telehealings - Account Verified</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .verified-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: var(--container-padding);
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: var(--spacing-2xl);
+            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .verified-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Optional secondary button style */
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+        .btn-outline:hover, .btn-outline:focus {
+            color: #ffffff;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container hero">
+        <main class="verified-container">
+            <img src="../../assets/images/Verify.png" alt="Success" class="success-icon">
+            <h1 class="verified-title">Account Verified!</h1>
+            <p class="instruction-text">Your phone number has been successfully verified. You're all set.</p>
+            
+            <a href="../Home.html" class="btn-primary btn-full" style="margin-top: 30px;">
+                Go to Home Page
+            </a>
+            <a href="#" class="btn-primary btn-full btn-outline" style="margin-top: 15px;">
+                Complete Profile
+            </a>
+        </main>
+    </div>
+</body>
+</html>

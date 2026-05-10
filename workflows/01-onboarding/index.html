@@ -9,66 +9,170 @@
     <title>Telehealings - Welcome</title>
     <!-- Link to global styles for shared components and variables -->
     <link rel="stylesheet" href="../../css/global.css" />
-    <!-- Link to specific styles for this index page -->
-    <link rel="stylesheet" href="./style.css" />
     <meta name="view-transition" content="same-origin" />
+    
+    <!-- Local styles specific to the welcome/hero section page -->
+    <style>
+        /* Logo Styling */
+        .logo {
+            width: 6rem;
+            display: block;
+            margin: 0 auto;
+            margin-top: var(--spacing-2xl);
+        }
+
+        /* Features List Styling */
+        .features_1 {
+            color: var(--primary-color);
+            text-align: left;
+            font-size: 14px;
+            border-left: 2px solid var(--primary-color);
+            width: 250px;
+            margin-left: var(--spacing-xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .features_2 {
+            width: auto;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .features_1 ul,
+        .features_2 ul {
+            list-style-type: none;
+            padding-left: var(--spacing-lg);
+        }
+
+        .features_1 ul li,
+        .features_2 ul li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Info Graphics Styling for Features 2 */
+        .features_2 ul {
+            display: flex;
+            flex-direction: row;
+            gap: var(--spacing-sm);
+            padding-left: 0;
+            margin-left: var(--spacing-xl);
+            margin-right: var(--spacing-xl);
+        }
+
+        .features_2 ul li {
+            background: var(--secondary-color);
+            border: 1px solid var(--primary-color);
+            border-radius: 12px;
+            padding: var(--spacing-sm);
+            flex: 1;
+            text-align: center;
+            font-size: 11px;
+            margin-bottom: 0;
+            margin-top: 30px;
+            color: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .features_2 ul li span {
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
+        }
+
+        /* CTA Button Styling */
+        .button-style {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Align CTA text and button in the same line */
+        .cta_2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 60px;
+        }
+
+        .cta_text {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .heali {
+            margin-top: 15px;
+            margin-bottom: -30px;
+        }
+    </style>
 </head>
 
 <!-- =======================================================================
      BODY SECTION
      ======================================================================= -->
 <body>
-    <main>
-        <!-- ===================================================================
-             HERO SECTION: Logo, Headers, and Features
-             =================================================================== -->
-        <header class="hero">
-            <!-- Branding Header -->
-            <div class="hero_center">
-                <img class="logo" src="../../assets/images/Logo.png" alt="Telehealings Logo">
-                <h1 id="mainheader">Telehealings</h1>
-                <h3 id="subheader">Continuity-First Wellness Care Platform</h3>
-            </div>
-            
-            <!-- Features List 1: Platform Capabilities -->
-            <section class="features_1" aria-label="Platform Capabilities">
-                <ul>
-                    <li>AI-Powered Conversational Partner</li>
-                    <li>Therapist Handover Continuity</li>
-                    <li>Self-Help Library</li>
-                </ul>
-            </section>
-            
-            <!-- Spacer for visual separation -->
-            <div class="spacing" aria-hidden="true"></div>
-            
-            <!-- Features List 2: Platform Stats -->
-            <section class="features_2" aria-label="Platform Statistics">
-                <ul>
-                    <li>200+ Verified Therapists</li>
-                    <li>8+ Languages</li>
-                    <li>1000+ Hours of Therapy Sessions</li>
-                </ul>
-            </section>
-        </header>
+    <div class="mobile-container">
+        <main>
+            <!-- ===================================================================
+                 HERO SECTION: Logo, Headers, and Features
+                 =================================================================== -->
+            <header class="hero">
+                <!-- Branding Header -->
+                <div class="hero_center">
+                    <img class="logo" src="../../assets/images/Logo.png" alt="Telehealings Logo">
+                    <h1 id="mainheader">Telehealings</h1>
+                    <h3 id="subheader">Continuity-First Wellness Care Platform</h3>
+                </div>
+                
+                <!-- Features List 1: Platform Capabilities -->
+                <section class="features_1" aria-label="Platform Capabilities">
+                    <ul>
+                        <li>AI-Powered Conversational Partner</li>
+                        <li>Therapist Handover Continuity</li>
+                        <li>Self-Help Library</li>
+                    </ul>
+                </section>
+                
+                <!-- Spacer for visual separation -->
+                <div class="spacing" aria-hidden="true"></div>
+                
+                <!-- Features List 2: Platform Stats -->
+                <section class="features_2" aria-label="Platform Statistics">
+                    <ul>
+                        <li><span>200+</span> Verified Therapists</li>
+                        <li><span>8+</span> Languages</li>
+                        <li><span>1000+</span> Therapy Hours</li>
+                    </ul>
+                </section>
+            </header>
 
-        <!-- ===================================================================
-             CALL TO ACTION (CTA) SECTION
-             =================================================================== -->
-        <section class="cta" aria-label="Call to Action">
-            <!-- Mascot/Avatar Image -->
-            <img class="heali" src="../../assets/images/Heali.png" alt="Heali AI Assistant">
-            
-            <!-- CTA Text and Button -->
-            <div class="cta_2">
-                <ul class="cta_text">
-                    <li>Your wellness journey is</li>
-                    <li>one click away</li>
-                </ul>
-                <!-- Proceed to soft onboarding -->
-                <a href="./softonboarding.html" class="button-style" aria-label="Start your journey">→</a>
-            </div>
-        </section>
-    </main>
+            <!-- ===================================================================
+                 CALL TO ACTION (CTA) SECTION
+                 =================================================================== -->
+            <section class="cta" aria-label="Call to Action">
+                <!-- Mascot/Avatar Image -->
+                <img class="heali" src="../../assets/images/Heali.png" alt="Heali AI Assistant">
+                
+                <!-- CTA Text and Button -->
+                <div class="cta_2">
+                    <ul class="cta_text">
+                        <li>Your wellness journey is</li>
+                        <li>one click away</li>
+                    </ul>
+                    <!-- Proceed to soft onboarding -->
+                    <a href="./softonboarding.html" class="button-style" aria-label="Start your journey">→</a>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

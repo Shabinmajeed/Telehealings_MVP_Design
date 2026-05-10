@@ -9,7 +9,7 @@ const otpInputs = document.querySelectorAll('.otp-box');
 
 // Function to switch from Phone to OTP
 generateBtn.addEventListener('click', () => {
-    phoneState.classList.add('hidden');
+    generateBtn.classList.add('hidden');
     otpState.classList.remove('hidden');
     displayTitle.innerText = "Verify OTP";
     instructionText.innerText = "Enter the 6-digit code we sent to your device.";
