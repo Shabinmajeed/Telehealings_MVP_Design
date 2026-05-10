@@ -14,13 +14,13 @@
   Sets the main background image (wave), centers the block, and defines dimensions for the hero area.
 */
 .hero {
-    background-image: url(/assets/images/Wave.png);
+    background-image: url(../../assets/images/Wave.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
     display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 100px;
