@@ -1,0 +1,264 @@
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6; /* Consistent with onboarding background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   MOBILE CONTAINER (Phone Mockup)
+   ========================================================================== */
+.mobile-container {
+    width: 100%;
+    max-width: 380px;
+    height: 100vh;
+    max-height: 800px;
+    background: #ffffff;
+    background-image: linear-gradient(180deg, #e0f2fe 0%, #ffffff 40%);
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-height: 800px) {
+    .mobile-container {
+        border-radius: 40px; /* Simulates phone corners on desktop */
+    }
+}
+
+/* ==========================================================================
+   HEADER SECTION
+   ========================================================================== */
+
+   .main-header {
+    background-image: url(/assets/images/Wave.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 10px 15px 5px 5px;
+    border-radius: 30px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.notification-btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+
+.notification-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   CONTENT AREA
+   ========================================================================== */
+
+
+.main-contents {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.content-scroll {
+    padding: 0 20px 100px 20px; /* Bottom padding for nav space */
+    flex-grow: 1;
+}
+
+/* VERIFY BANNER */
+.verify-banner {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #b3d1f0;
+    border: 1px solid #2967c5;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #475569;
+}
+
+.banner-content img {
+    width: 24px;
+    height: 24px;
+}
+
+.verify-link {
+    margin-left: auto;
+    color: #2967c5;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* DASHBOARD CARDS */
+.card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.greeting-section { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-bottom: 20px; 
+    white-space: nowrap; }
+
+.heali-small {
+    width: 40px;
+    height: auto;
+}
+
+.user-greeting {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.greeting-text {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.card-header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* MOOD TRACKER COMPONENT */
+.mood-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mood-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.emoji {
+    font-size: 24px;
+    background: #f8fafc;
+    padding: 8px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+/* ==========================================================================
+   BOTTOM NAVIGATION
+   ========================================================================== */
+.bottom-nav {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    border-top: 1px solid #EDF2F7;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    color: #94a3b8;
+    text-decoration: none;
+}
+
+.nav-item.active {
+    color: #2967c5;
+}
+
+.nav-floating {
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin-top: -40px; /* Makes it float upward */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #ffffff;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
+    view-transition-name: heali-avatar;
+    z-index: 10;
+}
+
+.nav-floating img {
+    width: 40px;
+}

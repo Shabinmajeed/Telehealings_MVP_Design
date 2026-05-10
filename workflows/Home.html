@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- =======================================================================
+     HEAD SECTION: Metadata, Title, and External Resources
+     ======================================================================= -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telehealings Home</title>
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="./Home.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- =======================================================================
+     BODY SECTION: Main Application Interface
+     ======================================================================= -->
+<body>
+
+    <div class="mobile-container">
+        <!-- 1. PROFILE AND NOTIFICATION -->
+        <section class="top-navigation">
+            <header class="main-header">
+                <div class="user-profile">
+                    <img src="../../assets/images/user.png" alt="Profile" class="avatar">
+                    <div class="user-info">
+                        <span class="user-name">Ajesh Anand</span>
+                        <span class="dropdown-icon">▼</span>
+                    </div>
+                </div>
+                <button class="notification-btn">
+                    <img src="../../assets/images/notification.png" alt="Notifications">
+                </button>
+            </header>
+        </section>
+
+        <!-- 2. CONTENTS -->
+        <main class="main-contents">
+            <!-- ACCOUNT STATUS: Verification Banner -->
+            <section class="verify-banner">
+                <div class="banner-content">
+                    <img src="../../assets/images/verify.png" alt="Verify" class="verify-icon">
+                    <p>Please verify your account to book Therapists.</p>
+                    <a href="#" class="verify-link">Verify</a>
+                </div>
+            </section>
+
+            <!-- GREETING: Personalized Welcome and AI Mascot Message -->
+            <section class="greeting-section">
+                <div class="heali">
+                    <img src="../../assets/images/Heali.png" alt="Heali" class="heali-small">
+                </div>
+                <div class="greeting-content">
+                    <h1 class="user-greeting">Good morning, Ajesh Anand</h1>
+                    <p class="greeting-text">We’re here to help you manage your stress today. Take a moment for yourself.</p>
+                </div>
+            </section>
+
+            <!-- MOOD TRACKER: Daily Emotional Check-in -->
+            <section class="card mood-card">
+                <div class="card-header">
+                    <h2>How Are You Feeling today?</h2>
+                    <button class="close-btn">✕</button>
+                </div>
+                <div class="mood-options">
+                    <div class="mood-item"><span class="emoji">😋</span><span>Energized</span></div>
+                    <div class="mood-item"><span class="emoji">😊</span><span>Calm</span></div>
+                    <div class="mood-item"><span class="emoji">😐</span><span>Okay</span></div>
+                    <div class="mood-item"><span class="emoji">😐</span><span>Okay</span></div>
+                    <div class="mood-item"><span class="emoji">😐</span><span>Okay</span></div>
+                </div>
+            </section>
+
+            <!-- APPOINTMENT: Upcoming Session Details -->
+            <section class="card appointment-card">
+                <div class="card-header">
+                    <h2>Your Next Appointment</h2>
+                </div>
+                <div class="appointment-details">
+                    <img src="../../assets/images/Heali.png" alt="Appointment Mascot" class="mascot-inline">
+                    <div class="date-time">
+                        <div class="dt-block">
+                            <small>Date and Time</small>
+                            <strong>Thursday, Oct 24, 2024</strong>
+                            <p>Date of appointment</p>
+                        </div>
+                        <div class="dt-block time-highlight">
+                            <strong>02:00 PM — 03:00 PM</strong>
+                            <p>Eastern Standard Time (EST)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 3. BOTTOM NAVIGATION -->
+        <nav class="bottom-nav-container">
+          <div class="bottom-nav">
+            <div class="nav-item active">
+                <img src="../../assets/images/home-icon.png" alt="Home">
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <img src="../../assets/images/care-icon.png" alt="Care">
+                <span>Care</span>
+            </div>
+            <!-- Floating Action Button for AI Assistant -->
+            <div class="nav-floating">
+                <img src="../../assets/images/Heali.png" alt="Heali">
+            </div>
+            <div class="nav-item">
+                <img src="../../assets/images/discover-icon.png" alt="Discover">
+                <span>Discover</span>
+            </div>
+            <div class="nav-item">
+                <img src="../../assets/images/more-icon.png" alt="More">
+                <span>More</span>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+</body>
+</html>
