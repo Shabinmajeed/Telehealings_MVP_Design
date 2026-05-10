@@ -149,20 +149,9 @@
     margin: auto;
     margin-bottom: 10px;
     view-transition-name: heali-avatar;
-    animation: floatHeali 4s ease-in-out infinite;
 }
 
-/* Smooth floating animation with dynamic shadow */
-@keyframes floatHeali {
-    0%, 100% { 
-        transform: translateY(0); 
-        filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.1));
-    }
-    50% { 
-        transform: translateY(-10px); 
-        filter: drop-shadow(0 20px 16px rgba(0, 0, 0, 0.05));
-    }
-}
+
 
 /* 
   Call to Action (CTA) 2 - Flex Container

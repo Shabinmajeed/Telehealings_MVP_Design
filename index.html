@@ -6,7 +6,7 @@
     <title>Telehealings - Splash</title>
     
     <!-- Link to global CSS for shared styles -->
-    <link rel="stylesheet" href="softonboarding.css">
+    <link rel="stylesheet" href="./css/global.css"/>
     
     <!-- Local styles specific to the splash screen -->
     <style>
@@ -141,12 +141,12 @@
     </style>
 </head>
 <!-- The onclick attribute redirects the user to the onboarding workflow when any part of the screen is clicked -->
-<body onclick="window.location.href='workflows/01-onboarding/index.html'">
+<body onclick="window.location.href='./workflows/01-onboarding/index.html'">
     <div class="splash-container">
         <!-- Logo block -->
         <div class="logo">
             <!-- Tries to load the logo image, falls back to text if it fails -->
-            <img src="assets/images/Logo.png" alt="Telehealings Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <img src="./assets/images/Logo.png" alt="Telehealings Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
             <div class="logo-text-fallback">✦</div>
         </div>
         
