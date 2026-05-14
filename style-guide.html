@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telehealings - Style Guide</title>
+    <!-- Link directly to the global CSS -->
+    <link rel="stylesheet" href="./css/global.css"/>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="style-guide-body">
+    <div class="style-guide-container">
+        <h1 class="main-title text-left m-0 mb-xl" style="font-size: 3rem;">Telehealings Style Guide</h1>
+        <p class="instruction-text mb-3xl">This guide showcases all reusable CSS components, utilities, and layout variables defined in <code>global.css</code>.</p>
+
+        <!-- ===================================================================
+             COLORS
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Colors</h2>
+            <div class="color-swatch-container">
+                <!-- Primary & Secondary -->
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--primary-color);"></div><p>Primary</p><code>--primary-color</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--primary-hover);"></div><p>Primary Hover</p><code>--primary-hover</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--secondary-color);"></div><p>Secondary</p><code>--secondary-color</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--blue-accent);"></div><p>Blue Accent</p><code>--blue-accent</code></div>
+                
+                <!-- Text -->
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--text-main);"></div><p>Text Main</p><code>--text-main</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--text-light);"></div><p>Text Light</p><code>--text-light</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--text-primary);"></div><p>Text Primary</p><code>--text-primary</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--text-secondary);"></div><p>Text Secondary</p><code>--text-secondary</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--text-muted);"></div><p>Text Muted</p><code>--text-muted</code></div>
+                
+                <!-- Backgrounds -->
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--bg-color); border: 1px solid var(--border-light);"></div><p>Background</p><code>--bg-color</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--bg-light); border: 1px solid var(--border-light);"></div><p>Bg Light</p><code>--bg-light</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--bg-lighter); border: 1px solid var(--border-light);"></div><p>Bg Lighter</p><code>--bg-lighter</code></div>
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--bg-subtle); border: 1px solid var(--border-light);"></div><p>Bg Subtle</p><code>--bg-subtle</code></div>
+                
+                <!-- Borders -->
+                <div class="color-swatch"><div class="color-chip" style="background-color: var(--border-light);"></div><p>Border Light</p><code>--border-light</code></div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             TYPOGRAPHY
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Typography</h2>
+            <div class="sg-item">
+                <h3>App Headers</h3>
+                <h1 id="mainheader">#mainheader</h1>
+                <p id="subheader">#subheader - App Subtitle</p>
+                <hr style="border: none; border-top: 1px solid var(--border-light); margin: var(--spacing-md) 0;">
+                <h1 class="main-title">.main-title / .page-title</h1>
+                <p class="sub-title">.sub-title - Section descriptions</p>
+            </div>
+            <div class="sg-item">
+                <h3>Paragraphs & Utilities</h3>
+                <p class="instruction-text"><b>.instruction-text:</b> Used for informational text inside forms and steps.</p>
+                <p class="text-primary font-bold text-lg"><b>.text-primary .font-bold .text-lg</b></p>
+                <p class="text-secondary font-semibold text-base"><b>.text-secondary .font-semibold .text-base</b></p>
+                <p class="text-muted font-medium text-sm"><b>.text-muted .font-medium .text-sm</b></p>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             BUTTONS
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Buttons</h2>
+            <div class="sg-item">
+                <h3>Primary Actions</h3>
+                <div class="component-grid">
+                    <button class="btn-primary">.btn-primary</button>
+                    <button class="btn-primary" disabled>.btn-primary disabled</button>
+                </div>
+                <div class="mt-lg">
+                    <button class="btn-primary btn-full">.btn-primary .btn-full</button>
+                </div>
+            </div>
+            <div class="sg-item">
+                <h3>Block & Circular Actions</h3>
+                <div class="component-grid flex-center">
+                    <button class="btn-block m-0">.btn-block</button>
+                    <button class="btn-circular"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="sg-item">
+                <h3>Social Sign-in (.social-btn)</h3>
+                <div class="flex gap-md" style="max-width: 500px;">
+                    <button class="social-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+                        Google
+                    </button>
+                    <button class="social-btn">
+                        <i class="fab fa-apple text-lg"></i>
+                        Apple
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             INPUTS & FORMS
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Forms & Inputs</h2>
+            <div class="sg-item" style="max-width: 400px;">
+                <h3>Standard Input (.input-standard)</h3>
+                <label class="input-label">.input-label</label>
+                <input type="text" class="input-standard m-0 w-full" placeholder="Placeholder text...">
+            </div>
+            <div class="sg-item" style="max-width: 400px;">
+                <h3>Border Input (.input-border)</h3>
+                <input type="text" class="input-border w-full" placeholder="Placeholder text...">
+            </div>
+            <div class="sg-item" style="max-width: 400px;">
+                <h3>Phone Input (.phone-input-wrapper)</h3>
+                <div class="phone-input-wrapper m-0">
+                    <div class="country-selector">🇮🇳</div>
+                    <input type="tel" class="phone-field" placeholder="Phone number">
+                </div>
+            </div>
+            <div class="sg-item" style="max-width: 400px;">
+                <h3>OTP Input (.otp-input-wrapper)</h3>
+                <div class="otp-input-wrapper m-0">
+                    <input type="text" class="otp-box" value="1" maxlength="1">
+                    <input type="text" class="otp-box" value="2" maxlength="1">
+                    <input type="text" class="otp-box" value="3" maxlength="1">
+                    <input type="text" class="otp-box" value="4" maxlength="1">
+                    <input type="text" class="otp-box" value="5" maxlength="1">
+                    <input type="text" class="otp-box" value="6" maxlength="1">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             CARDS
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Selectable Cards</h2>
+            <div class="sg-item component-grid">
+                <button class="card" style="width: 220px; text-align: center;">
+                    <div class="card-header">
+                        <h2>.card-header</h2>
+                        <i class="fas fa-info-circle text-muted"></i>
+                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+                    <div class="card-name">.card-name</div>
+                    <div class="card-details">.card-details</div>
+                </button>
+                <button class="card" aria-pressed="true" style="width: 220px; text-align: center;">
+                    <div class="card-header">
+                        <h2>aria-pressed="true"</h2>
+                        <i class="fas fa-check-circle text-primary"></i>
+                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="card-name">Anxiety</div>
+                    <div class="card-details">Active state styling</div>
+                </button>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             AVATARS
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Avatars & Mascots</h2>
+            <div class="sg-item component-grid flex-center">
+                <div class="text-center">
+                    <img src="./assets/images/Heali.png" alt="Heali Small" class="heali-small mb-sm">
+                    <code>.heali-small</code>
+                </div>
+                <div class="text-center">
+                    <img src="./assets/images/Heali.png" alt="Heali" class="heali mb-sm">
+                    <code>.heali</code>
+                </div>
+                <div class="text-center">
+                    <img src="./assets/images/Heali.png" alt="Heali Avatar" class="heali-avatar mb-sm" style="animation: none;">
+                    <code>.heali-avatar</code>
+                </div>
+                <div class="text-center">
+                    <img src="https://i.pravatar.cc/150?img=32" alt="Avatar" class="avatar m-0 mb-sm">
+                    <br><code>.avatar</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             BANNERS & HEADERS
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Banners & Headers</h2>
+            <div class="sg-item">
+                <h3>Verification Banner (.verify-banner)</h3>
+                <section class="verify-banner m-0">
+                    <div class="banner-content">
+                        <img src="./assets/images/Verify.png" alt="Verify" class="verify-icon">
+                        <p>Please verify your account to book Therapists.</p>
+                        <a href="#" class="verify-link">Verify</a>
+                    </div>
+                </section>
+            </div>
+            <div class="sg-item">
+                <h3>Wave Background Headers</h3>
+                <div class="component-grid">
+                    <!-- App Header -->
+                    <div style="width: 350px; border: 1px solid var(--border-light); border-radius: var(--border-radius-xl); overflow: hidden;">
+                        <header class="main-header">
+                            <i class="fas fa-bars text-primary text-lg"></i>
+                            <h1 class="main-title m-0 text-lg">.main-header</h1>
+                            <img src="./assets/images/Heali.png" alt="Heali Small" class="heali-small m-0">
+                        </header>
+                    </div>
+                    <!-- Onboarding Header -->
+                    <div style="width: 350px; border: 1px solid var(--border-light); border-radius: var(--border-radius-xl); overflow: hidden;">
+                        <header class="boarding-header">
+                            <h1 class="page-title text-left">.boarding-header</h1>
+                            <p class="instruction-text text-left m-0">Used in step-by-step flows.</p>
+                        </header>
+                    </div>
+                    <!-- Hero Splash Header -->
+                    <div style="width: 350px; border: 1px solid var(--border-light); border-radius: var(--border-radius-xl); overflow: hidden; background-color: white;">
+                        <header class="hero pt-lg">
+                            <h1 id="mainheader" style="font-size: 2rem;">.hero</h1>
+                            <p id="subheader">Used in intros</p>
+                            <img src="./assets/images/Heali.png" alt="Heali Avatar" class="heali-avatar" style="width: 100px; animation: none;">
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SPLASH SCREEN
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Splash Screen</h2>
+            <div class="sg-item" style="background: linear-gradient(135deg, #1E5AA8 0%, #4A90E2 100%); padding: var(--spacing-2xl); border-radius: var(--border-radius-xl); max-width: 380px; margin: 0 auto var(--spacing-xl) auto;">
+                <div class="splash-container" style="animation: none;">
+                    <div class="splash-logo" style="animation: none;">
+                        <div class="splash-logo-text" style="display: block;">✦</div>
+                    </div>
+                    <h1 class="splash-title" style="color: white;">Telehealings</h1>
+                    <p class="splash-subtitle" style="color: white;">Continuity-First Wellness Care Platform</p>
+                    <p class="splash-hint" style="color: white; animation: none;">Tap anywhere to start</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             ONBOARDING
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Onboarding Components</h2>
+            <div class="component-grid">
+                <div class="sg-item flex-grow-1">
+                    <h3>Features List (Vertical)</h3>
+                    <section class="features_1">
+                        <ul>
+                            <li>AI-Powered Conversational Partner</li>
+                            <li>Therapist Handover Continuity</li>
+                            <li>Self-Help Library</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="sg-item flex-grow-1">
+                    <h3>Features List (Horizontal / Stats)</h3>
+                    <section class="features_2" style="max-width: 300px; margin: 0;">
+                        <ul style="margin: 0;">
+                            <li><span>200+</span> Verified</li>
+                            <li><span>8+</span> Languages</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="sg-item">
+                    <h3>CTA Button Round</h3>
+                    <a href="#" class="cta-button-round" aria-label="Start your journey">→</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             MODERN FORMS & PROFILE
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Profile & Modern Forms</h2>
+            <div class="component-grid">
+                <div class="sg-item flex-grow-1" style="min-width: 300px;">
+                    <h3>Profile Components</h3>
+                    <header class="profile-header mb-md" style="border: 1px solid var(--border-light); border-radius: var(--border-radius-xl); background: var(--bg-color);">
+                        <a href="#" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+                        <h1 class="header-title">Personal Details</h1>
+                        <img src="./assets/images/Heali.png" alt="Heali Mascot" class="heali-small" style="margin: 0;">
+                    </header>
+                    
+                    <div class="progress-container mb-md" style="padding: 0;">
+                        <div class="progress-step active"></div>
+                        <div class="progress-step"></div>
+                        <div class="progress-step"></div>
+                    </div>
+                    
+                    <div class="info-box" style="margin: 0;">
+                        <i class="fas fa-info-circle"></i>
+                        <p>This information is used only for identity verification.</p>
+                    </div>
+                </div>
+
+                <div class="sg-item flex-grow-1" style="min-width: 300px;">
+                    <h3>Floating Labels & Toggles</h3>
+                    <div class="form-group">
+                        <div class="input-wrapper has-content">
+                            <div class="gender-toggle">
+                                <div class="gender-option active">Male</div>
+                                <div class="gender-option">Female</div>
+                                <div class="gender-option">Other</div>
+                            </div>
+                            <label class="floating-label">Gender</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-wrapper has-content">
+                            <input type="text" class="input-border" value="Jonathan Alexander" placeholder=" ">
+                            <label class="floating-label">Full Name <span>*</span></label>
+                            <i class="fas fa-pencil-alt icon-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SHADOWS & BORDERS
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Shadows & Borders</h2>
+            <div class="sg-item">
+                <h3>Box Shadows</h3>
+                <div class="component-grid">
+                    <div class="shadow-box" style="box-shadow: var(--shadow-xs);">--shadow-xs</div>
+                    <div class="shadow-box" style="box-shadow: var(--shadow-sm);">--shadow-sm</div>
+                    <div class="shadow-box" style="box-shadow: var(--shadow-md);">--shadow-md</div>
+                    <div class="shadow-box" style="box-shadow: var(--shadow-lg);">--shadow-lg</div>
+                    <div class="shadow-box" style="box-shadow: var(--shadow-xl);">--shadow-xl</div>
+                    <div class="shadow-box" style="box-shadow: var(--shadow-primary);">--shadow-primary</div>
+                    <div class="shadow-box" style="box-shadow: var(--shadow-primary-lg);">--shadow-primary-lg</div>
+                </div>
+            </div>
+            <div class="sg-item">
+                <h3>Border Radius</h3>
+                <div class="component-grid">
+                    <div class="shadow-box" style="border-radius: var(--border-radius-sm);">sm</div>
+                    <div class="shadow-box" style="border-radius: var(--border-radius-md);">md</div>
+                    <div class="shadow-box" style="border-radius: var(--border-radius-lg);">lg</div>
+                    <div class="shadow-box" style="border-radius: var(--border-radius-xl);">xl</div>
+                    <div class="shadow-box" style="border-radius: var(--border-radius-2xl);">2xl</div>
+                    <div class="shadow-box" style="border-radius: var(--border-radius-3xl);">3xl</div>
+                    <div class="shadow-box" style="border-radius: var(--border-radius-pill);">pill</div>
+                    <div class="shadow-box" style="border-radius: var(--border-radius-full);">full</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             SPACING
+             =================================================================== -->
+        <section class="sg-section">
+            <h2>Spacing</h2>
+            <div class="sg-item">
+                <div class="spacing-demo"><span class="spacing-label">--spacing-xs (4px)</span><div class="spacing-block" style="width: var(--spacing-xs);"></div></div>
+                <div class="spacing-demo"><span class="spacing-label">--spacing-sm (8px)</span><div class="spacing-block" style="width: var(--spacing-sm);"></div></div>
+                <div class="spacing-demo"><span class="spacing-label">--spacing-md (12px)</span><div class="spacing-block" style="width: var(--spacing-md);"></div></div>
+                <div class="spacing-demo"><span class="spacing-label">--spacing-lg (16px)</span><div class="spacing-block" style="width: var(--spacing-lg);"></div></div>
+                <div class="spacing-demo"><span class="spacing-label">--spacing-xl (20px)</span><div class="spacing-block" style="width: var(--spacing-xl);"></div></div>
+                <div class="spacing-demo"><span class="spacing-label">--spacing-2xl (24px)</span><div class="spacing-block" style="width: var(--spacing-2xl);"></div></div>
+                <div class="spacing-demo"><span class="spacing-label">--spacing-3xl (30px)</span><div class="spacing-block" style="width: var(--spacing-3xl);"></div></div>
+                <div class="spacing-demo"><span class="spacing-label">--spacing-4xl (40px)</span><div class="spacing-block" style="width: var(--spacing-4xl);"></div></div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

@@ -34,7 +34,7 @@
             display: flex;
             gap: var(--spacing-sm);
             padding: 0 var(--spacing-2xl);
-            margin-bottom: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
         }
         
         .step {
@@ -52,7 +52,7 @@
             background-color: var(--bg-subtle);
             border: 1px solid var(--blue-accent);
             border-radius: var(--border-radius-xl);
-            margin: 0 var(--container-padding) 0;
+            margin: 0 var(--container-padding) var(--spacing-xl);
             padding: 8px var(--spacing-md);
             display: flex;
             gap: var(--spacing-md);
@@ -72,16 +72,16 @@
         }
         
         .profile-form {
-            padding: 0 var(--container-padding) var(--spacing-md);
+            padding: 0 var(--container-padding) var(--spacing-xl);
         }
 
         /* Override global form padding to prevent unwanted large gaps */
         .profile-form form {
-            padding: var(--spacing-md) 0 0 0;
+            padding: 0;
         }
         
         .form-group {
-            margin-bottom: var(--spacing-sm);
+            margin-bottom: var(--spacing-lg);
         }
         
         .input-wrapper .input-border {
@@ -159,8 +159,8 @@
             font-size: 16px;
             font-weight: 700;
             color: var(--text-primary);
-            margin: var(--spacing-sm) 0 var(--spacing-sm);
-            padding-bottom: 4px;
+            margin: var(--spacing-xl) 0 var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
             border-bottom: 1px solid var(--border-light);
         }
 
@@ -170,13 +170,9 @@
         }
         
         .btn-primary.btn-full {
-            margin-top: var(--spacing-md);
+            margin-top: var(--spacing-xl);
             margin-bottom: 0;
             width: 100%;
-        }
-
-        .spacing {
-            height: 10px;
         }
     </style>
 </head>
@@ -193,7 +189,6 @@
         <div class="progress-container">
             <div class="step active"></div>
             <div class="step active"></div>
-            <div class="step"></div>
         </div>
         
         <div class="info-box">
@@ -204,11 +199,7 @@
         <main class="profile-form">
             <form action="#" method="POST">
                 
-                
-                
                 <h2 class="section-title">Contact Details</h2>
-                
-                <div class="spacing"></div>
 
                 <div class="form-group">
                     <div class="input-wrapper">
@@ -234,8 +225,6 @@
                 </div>
 
                 <h2 class="section-title">Emergency Contact</h2>
-                <div class="spacing"></div>
-                
 
                  <div class="form-group">
                     <div class="input-wrapper">

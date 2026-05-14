@@ -2,10 +2,10 @@
 const phoneState = document.getElementById('phone-state');
 const otpState = document.getElementById('otp-state');
 const generateBtn = document.getElementById('generate-btn');
-const verifyBtn = document.getElementById('verify-btn');
 const displayTitle = document.getElementById('display-title');
 const instructionText = document.getElementById('instruction-text');
 const otpInputs = document.querySelectorAll('.otp-box');
+const phoneInput = document.getElementById('phone');
 
 // Function to switch from Phone to OTP
 generateBtn.addEventListener('click', () => {
@@ -15,6 +15,13 @@ generateBtn.addEventListener('click', () => {
     instructionText.innerText = "Enter the 6-digit code we sent to your device.";
     otpInputs[0].focus(); // Automatically focus the first box
 });
+
+// Restrict phone input to numbers only
+if (phoneInput) {
+    phoneInput.addEventListener('input', function() {
+        this.value = this.value.replace(/\D/g, '').slice(0, 10);
+    });
+}
 
 // Logic to jump to the next OTP box automatically
 otpInputs.forEach((input, index) => {
@@ -29,10 +36,4 @@ otpInputs.forEach((input, index) => {
             otpInputs[index - 1].focus();
         }
     });
-});
-
-// Final Verification Action
-verifyBtn.addEventListener('click', () => {
-    // Redirect to Home.html (one folder up)
-    window.location.href = "../Home.html";
 });

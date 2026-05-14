@@ -72,10 +72,15 @@
         <main class="form-section" id="phone-state">
             <label for="phone" class="input-label">Phone Number</label>
             <div class="phone-input-wrapper">
-                <div class="country-selector">
-                    <span class="flag">⌄</span>
+                <div class="country-selector" style="width: auto; min-width: 85px; padding: 0 8px;">
+                    <select id="country-code" style="background: transparent; border: none; font-size: 16px; outline: none; cursor: pointer; width: 100%;">
+                        <option value="+91" selected>🇮🇳 +91</option>
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+61">🇦🇺 +61</option>
+                    </select>
                 </div>
-                <input type="tel" id="phone" placeholder="000 000 0000" class="phone-field">
+                <input type="tel" id="phone" placeholder="000 000 0000" class="phone-field" maxlength="10">
             </div>
 
             <button type="button" class="btn-primary btn-full" id="generate-btn">
@@ -83,7 +88,7 @@
             </button>
         </main>
 
-        <main class="form-section" id="otp-state" style="display: none;">
+        <main class="form-section hidden" id="otp-state">
             <label class="input-label">Enter Code</label>
             <div class="otp-input-wrapper">
                 <input type="text" maxlength="1" class="otp-box" placeholder="0">
@@ -112,14 +117,6 @@
         </footer>
     </div>
 
-    <script>
-        document.getElementById('generate-btn').addEventListener('click', function() {
-            const otpState = document.getElementById('otp-state');
-            otpState.style.display = 'block';
-            this.style.display = 'none';
-            document.getElementById('display-title').innerText = 'Verify OTP';
-            document.getElementById('instruction-text').innerText = 'Enter the 6-digit code sent to your phone.';
-        });
-    </script>
+    <script src="../../js/phone verification.js"></script>
 </body>
 </html>
